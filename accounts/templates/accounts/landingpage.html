@@ -1,0 +1,450 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Homepage</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	  <link rel='stylesheet' type='text/css' media='screen' href="{% static '/css/bootstrap.min.css' %}">
+  <link rel='stylesheet' type='text/css' media='screen' href="{% static '/js/bootstrap.bundle.min.js' %}">
+
+  <link rel='stylesheet' type='text/css' media='screen' href="{% static '/css/style.css' %}">
+  <link rel='stylesheet' type='text/css' media='screen' href="{% static '/css/responsive.css' %}">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
+<style>
+  .user_card {
+    width: 350px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b); /* Slight transparency for better contrast */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+.user_card:hover{
+  transform: translateY(-10px);
+}
+</style>
+</head>
+
+<body>
+
+
+  <!-- section 1 ( header )  starts -->
+
+  <section class="bg_img">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-4">
+
+          <div class="logo_name" id="Team">
+            <a href="{% url 'landing' %}">
+              <h1 style="font-size: 33px; font-family: 'Black Jack', cursive;">FOODIE MINDS</h1>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="col-lg-8">
+          <div class="top_menu">
+            <nav class="navbar navbar-expand-lg ">
+              <!-- <div class="container-fluid"> -->
+              <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav" >
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#home">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#services">SERVICES</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about_us">ABOUT US</a>
+                  </li>
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link" href="#contact_us">CONTACT US</a>-->
+<!--                  </li>-->
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">LOG IN</a>
+                  </li>
+ <!--              <li class="nav-item">-->
+ <!--                    <a class="nav-link" href="{% url 'register' %}">SIGN UP</a>-->
+               <!-- </li>-->
+
+                </ul>
+              </div>
+
+            </nav>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-0">
+
+      <div class="col-lg-12">
+
+        <div class="main_content text-center">
+
+          <h4 style="font-family: 'Black Jack', cursive;">Forecast Food Demand For Next Weeks</h4>
+
+          <h6 style="font-family: 'Black Jack', cursive;">Manage your inventory and forecast food demand for center at one place</h6>
+
+          <div class="btn_1 mt-5">
+
+            <!-- <button class="btn btn-light btn-outline-warning">Food Demand Forecasting</button> -->
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- section 1 ( header )  ends -->
+
+
+  <!-- section 2 ( Our Services )  starts-->
+
+
+  <section style="background-color: black;">
+
+    <div class="container mb_90" >
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+          <div class="services_title text-center mt_90 " id="services">
+
+            <h1 style="font-family: 'Black Jack', cursive; color: white;"> Our <u class="hr text-dar" style="font-family: 'Black Jack', cursive;color: white;">Services</u></h1>
+
+
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+
+      <div class="row mt-5 ">
+
+        <div class=" offset-lg-1 offset-md-1 col-lg-4  col-md-4 col-sm-12 mt">
+
+          <div class="user_card">
+
+            
+            <img src="{% static 'img/remaining/images/15.jpg' %}" alt="" class="img-fluid img_center">
+
+            <div class="text-bloc">
+              <h4 style="font-family: 'Black Jack', cursive;color: black; text-align: center;">Food Demand Forecasting</h4>
+<br>
+              <p style="color: black;">It is very important for any fulfilment center to forecast optimum food demand for its center. Using
+                this
+                model, you can forecast food demand for your fulfilment center.
+
+              </p>
+
+              <div class="f" style="text-align: center;">
+                <button 
+        style="background-color: #007bff; border-radius: 10px; border: none; padding: 6px 50px; font-size: 16px; margin-left: 0px; color: white;"
+        onclick="window.location.href='{% url 'login' %}'">
+        Forecast Now
+    </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-lg-4 col-md-4 col-sm-12  offset-md-2 offset-lg-2  mt" >
+
+          <div class="user_card">
+
+           
+
+            
+            <a href="{% url 'home' %}" ><img src="{% static 'img/remaining/images/14.jpg' %}" alt="" height= "100px" class="img-fluid img_centr" ></a>
+            <div class="text-block_">
+              <h4 style="font-family: 'Black Jack', cursive; text-align: center;">Inventory Management</h4>
+<br>
+              <p style="color: black;">Inventory Management helps center owner to keep track of available items at its center. Also they can
+                keep track of no. of orders placed, add new items, etc.</p>
+                <div class="f_d" style="text-align: center;">
+                   <button 
+        style="background-color: #007bff; border-radius: 10px; border: none; padding: 6px 40px; font-size: 16px; margin-left: 0px; color: white;"
+        onclick="window.location.href='{% url 'login' %}'">
+        Manage Inventory!
+    </button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+    </div>
+  </section>
+
+
+  <!-- section 2 ( Our Services )  ends-->
+
+
+
+  <!-- section 3 ( About us )  starts -->
+
+
+  <section class="bg_gray_colo" style="background-color: black; color: white;">
+
+    <div class="container mb_90">
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+          <div class="services_title text-center mt_90" id="about_us">
+
+            <h1 style="font-family: 'Black Jack', cursive;"> <u class="hr " style="font-family: 'Black Jack', cursive;">About</u> Us</h1>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row mt-5">
+
+        <div class="col-lg-6 ">
+
+          <div class="l_s_img">
+            <img src="{% static 'img/remaining/images/aboutfin.jpg' %}" alt="" width="400" height="350">
+          </div>
+        </div>
+
+
+        <div class="col-lg-6">
+
+          <div class="r_s_content" >
+
+            <h1>THE OBJECTIVE</h1>
+            <h4 style="background-color: black; color: white;"> OF THIS PROJECT IS TO CREATE A PROTOTYPE FOR A FOOD DELIVERY COMPANY WHERE ONE CAN FORECAST
+              FOOD DEMAND FOR NEXT FEW WEEKS AND CENTER OWNERS CAN MANAGE THEIR INVENTORY.</h4>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+  </section>
+
+
+
+  <!-- section 3 ( about us )  ends  -->
+
+
+
+
+
+  <!-- section 4 ( team section )  starts  -->
+
+
+
+  <section class="team_bg"style="background-color: black; color: white;">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+          <div class="o_t_heading mt_90 ">
+            <h3 style="font-family: 'Black Jack', cursive;">OUR TEAM</h3>
+            <p style="color: white;">Pranav Gagare</p>
+            <p style="color: white;">Aditi Phapale</p>
+            <p style="color: white;">Tejas Kardile</p>
+            <p style="color: white;">Amruta Phatangare</p>
+            <!--
+                        <h2 class="title">Expert Team
+                            <span>Member</span> </h2> -->
+          </div>
+        </div>
+      </div>
+
+      
+
+
+
+
+
+
+  <!-- section 6 ( footer )   starts   -->
+  <br><br>  
+
+  <section class="bg-black_gradient_img"style="background-color: black; color: white;">
+
+    <div class="container"style="background-color: black;">
+
+      <div class="row">
+
+        <!-- <div class="col-lg-12">
+
+          <div class="row"> -->
+
+        <div class="col-lg-8 col-md-6">
+
+          <div class="logo_at_footer">
+
+            <div class="logo_name">
+              <a href="index_2.html">
+                <h1 style="font-family: 'Black Jack', cursive;">FOODIE MINDS</h1>
+              </a>
+            </div>
+
+            <h6>Forecast Food Demand For Next Few Weeks Using Our ML Model.</h6>
+
+            <p style="font-size:10px;">THE OBJECTIVE
+              OF THIS PROJECT IS TO CREATE A PROTOTYPE FOR A FOOD DELIVERY COMPANY 
+              <br> WHERE ONE CAN FORECAST
+              FOOD DEMAND FOR NEXT FEW WEEKS AND CENTER OWNERS CAN<br> MANAGE THEIR INVENTORY.</p>
+          </div>
+
+
+          <div class="add">
+            <div class="address_icon">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+            </div>
+
+
+            <div class="address mb_90">
+              <h3>ADDRESS</h3>
+              <h4>Amrutvahinicollege@gmail.com</h4>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-lg-4 col-md-7 mt-5">
+
+
+
+          <div class="navig text-center">
+
+            <h4 style="font-family: 'Black Jack', cursive;">Our Services</h4>
+
+            <ul>
+              <li><a href="{% url 'forecasting' %}">FOOD DEMAND FORCASTING</a></li>
+              <li><a href="{% url 'home' %}">INVENTORY MANAGEMENT</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+
+    </div>
+    </div>
+
+    </div>
+
+
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+
+  <!-- section 12 ( footer  section )   ends                 -->
+
+
+  <!-- section 13 ( copyright  section )   starts               -->
+
+<!--  <section class="bg-black ">-->
+
+<!--    <div class="container">-->
+
+<!--      <div class="row g-0">-->
+
+<!--        <div class="col-lg-6 col-md-6 col-sm-6 g-0">-->
+
+<!--          <div class="copyright mt_25 mb_25">-->
+
+<!--            &lt;!&ndash; <h6> Coppyright © by MM Wedding 2016. Made with love by AHT Studio.</h6> &ndash;&gt;-->
+<!--            Copyright © by Foodie Minds 2022.-->
+
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-lg-6 col-md-6 col-sm-6  g-0">-->
+
+<!--          <div class="social_media mt_25">-->
+
+<!--            <ul class="p-0">-->
+<!--              <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>-->
+<!--              <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>-->
+<!--              <li><a href=""><i class="fa fa-github" aria-hidden="true"></i></a></li>-->
+<!--              <li><a href=""><i class="fa fa-github" aria-hidden="true"></i></a></li>-->
+<!--            </ul>-->
+<!--          </div>-->
+<!--        </div>-->
+
+
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+
+  <!-- section 13 ( copyright  section )   ends              
+
+
+
+
+
+
+</body>
+
+</html>
